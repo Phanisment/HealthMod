@@ -1,0 +1,8 @@
+{
+	"item.ph_bhc.dark_health": "Dark Health",
+	"item.ph_bhc.health": "Health",
+	"itemgroup.ph_bhc": "Test Group",
+	"ph_bhc.deathprem": "Your Remaining Health is Empty",
+	"ph_bhc.add_health": "Max Health increased!",
+	"ph_bhc.max_health": ""
+}
