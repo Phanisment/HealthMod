@@ -1,8 +1,8 @@
 {
 	"textures": [
-		"ph_bhc:particle/add_health_1",
-		"ph_bhc:particle/add_health_2",
-		"ph_bhc:particle/add_health_3",
-		"ph_bhc:particle/add_health_4"
+		"ph_bhc:add_health_1",
+		"ph_bhc:add_health_2",
+		"ph_bhc:add_health_3",
+		"ph_bhc:add_health_4"
 	]
 }
