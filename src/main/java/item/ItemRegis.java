@@ -14,11 +14,11 @@ import net.minecraft.nbt.NbtList;
 import net.minecraft.nbt.NbtString;
 
 import io.phanisment.bhc.Main;
-import io.phanisment.bhc.item.DarkHealthItem;
 
 public class ItemRegis {
 	public static final Item DARK_HEALTH = i("dark_health", new DarkHealthItem());
 	public static final Item HEALTH = i("health", new HealthItem());
+	public static final Item TOTEM_FRAGMENT = i("totem_fragment", new TotemFragmentItem());
 	public static final ItemGroup TEST_GROUP = Registry.register(Registries.ITEM_GROUP,
 		new Identifier(Main.id, "bhc_group"), 
 		FabricItemGroup.builder().displayName(Text.translatable("itemgroup.ph_bhc")).icon(() -> new ItemStack(DARK_HEALTH)).entries((displayContext, item) -> {

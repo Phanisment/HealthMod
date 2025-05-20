@@ -31,7 +31,7 @@ public class ServerPlayerEntityMixin {
 		if (current >= 2.0D) {
 			this.newMaxHealth = current - 2.0D;
 		}
-		self.dropItem(new ItemStack(ItemRegis.DARK_HEALTH), true);
+		self.dropItem(new ItemStack(ItemRegis.DARK_HEALTH), false);
 	}
 
 	@Inject(method = "copyFrom", at = @At("TAIL"))

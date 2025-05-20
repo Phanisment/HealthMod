@@ -21,7 +21,7 @@ public class HealthParticle extends SpriteBillboardParticle {
 		this.velocityX = velocityX;
 		this.velocityY = velocityY;
 		this.velocityZ = velocityZ;
-		this.scale = 0.25f;
+		this.scale = 0.1f;
 		this.maxAge = 40 + world.random.nextInt(20);
 		this.setSpriteForAge(spriteProvider);
 	}
@@ -32,9 +32,9 @@ public class HealthParticle extends SpriteBillboardParticle {
 		lifeCounter++;
 		this.setSpriteForAge(spriteProvider);
 		if (lifeCounter < 5) {
-			velocityY += 0.05;
+			velocityY += 0.025;
 		} else {
-			velocityY *= 0.95;
+			velocityY *= 0.1;
 		}
 		if (age > maxAge - 10) {
 			setAlpha((maxAge - age) / 10.0f);
