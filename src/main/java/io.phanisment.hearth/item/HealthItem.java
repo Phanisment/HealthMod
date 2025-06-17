@@ -14,8 +14,7 @@ import net.minecraft.text.Text;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.sound.SoundCategory;
-
-import io.phanisment.hearth.Main;
+import net.minecraft.particle.ParticleTypes;
 
 public class HealthItem extends Item {
 	public HealthItem() {
@@ -39,7 +38,7 @@ public class HealthItem extends Item {
 					attr.setBaseValue(current + 2.0);
 					user.sendMessage(Text.translatable("ph_hearth.add_health"));
 					world.playSound(null, user.getBlockPos(), SoundEvents.ENTITY_PLAYER_LEVELUP, SoundCategory.PLAYERS, 1.0f, 1.2f);
-					((ServerWorld)world).spawnParticles(Main.ADD_HEALTH_PARTICLE, user.getX(), user.getY() + 1, user.getZ(), 10, 0.4, 0.8, 0.4, 0.0);
+					((ServerWorld)world).spawnParticles(ParticleTypes.TOTEM_OF_UNDYING, user.getX(), user.getY() + 1, user.getZ(), 10, 0.4, 0.8, 0.4, 0.0);
 				} else {
 					user.sendMessage(Text.translatable("ph_hearth.max_health"));
 				}

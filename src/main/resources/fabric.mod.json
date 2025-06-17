@@ -17,9 +17,6 @@
 	"entrypoints": {
 		"main": [
 			"io.phanisment.hearth.Main"
-		],
-		"client": [
-			"io.phanisment.hearth.MainClient"
 		]
 	},
 	"mixins": [

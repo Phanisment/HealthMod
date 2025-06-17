@@ -5,6 +5,7 @@
 	"mixins": [
 		"FallingBlockEntityMixin",
 		"ServerPlayerEntityMixin",
+		"LivingEntityMixin",
 		"CactusBlockMixin",
 		"ItemEntityMixin"
 	],
