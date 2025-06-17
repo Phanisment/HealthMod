@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
+import net.minecraft.util.Rarity;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -15,9 +16,9 @@ import net.minecraft.nbt.NbtString;
 import io.phanisment.hearth.Main;
 
 public class ItemRegis {
-	public static final Item DARK_HEALTH = i("dark_health", new DarkHealthItem());
+	public static final Item DARK_HEALTH = i("dark_health", new Item(new Item.Settings().maxCount(1).fireproof().rarity(Rarity.UNCOMMON)));
 	public static final Item HEALTH = i("health", new HealthItem());
-	public static final Item TOTEM_FRAGMENT = i("totem_fragment", new TotemFragmentItem());
+	public static final Item TOTEM_FRAGMENT = i("totem_fragment", new Item(new Item.Settings().maxCount(4).rarity(Rarity.UNCOMMON)));
 	public static final ItemGroup HEALTH_GROUP = Registry.register(Registries.ITEM_GROUP,
 		Identifier.of(Main.id, "health_group"), 
 		FabricItemGroup.builder().displayName(Text.translatable("itemgroup.ph_hearth")).icon(() -> new ItemStack(DARK_HEALTH)).entries((displayContext, item) -> {

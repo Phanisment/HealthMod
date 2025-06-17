@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"category": "misc",
+	"ingredients": [
+		{"item": "ph_hearth:dark_health"},
+		{"item": "ph_hearth:totem_fragment"},
+		{"item": "ph_hearth:totem_fragment"},
+		{"item": "ph_hearth:totem_fragment"},
+		{"item": "ph_hearth:totem_fragment"},
+		{"item": "minecraft:netherite_ingot"},
+		{"item": "minecraft:netherite_ingot"},
+		{"item": "minecraft:netherite_ingot"},
+		{"item": "minecraft:netherite_ingot"}
+	],
+	"result": {
+		"id": "ph_hearth:health",
+		"count": 1
+	}
+}
