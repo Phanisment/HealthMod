@@ -1,10 +1,10 @@
 {
 	"credit": "Create by RefaMC",
 	"textures": {
-		"0": "ph_hearth:item/blackheart",
-		"1": "ph_hearth:item/blackheart_a",
-		"2": "ph_hearth:item/blackheart_trails",
-		"particle": "ph_hearth:item/blackheart"
+		"0": "ph_hearth:item/dark_health",
+		"1": "ph_hearth:item/dark_health_a",
+		"2": "ph_hearth:item/dark_health_trails",
+		"particle": "ph_hearth:item/dark_health"
 	},
 	"elements": [
 		{

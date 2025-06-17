@@ -43,7 +43,7 @@ public class ServerPlayerEntityMixin {
 				this.newMaxHealth = oldMixin.newMaxHealth;
 				attr.setBaseValue(this.newMaxHealth);
 			} else {
-				self.networkHandler.sendPacket(new TitleS2CPacket(Text.translatable("ph_bhc.deathprem")));
+				self.networkHandler.sendPacket(new TitleS2CPacket(Text.translatable("ph_hearth.deathprem")));
 				self.interactionManager.changeGameMode(GameMode.SPECTATOR);
 			}
 		}

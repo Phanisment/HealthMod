@@ -9,16 +9,27 @@ import net.minecraft.client.particle.SpriteProvider;
 import net.minecraft.client.particle.ParticleTextureSheet;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.particle.SimpleParticleType;
+import net.minecraft.util.math.random.Random;
 
 @Environment(EnvType.CLIENT)
 public class HealthParticle extends SpriteBillboardParticle {
-	public HealthParticle(ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ) {
+	private final SpriteProvider sprite;
+	
+	public HealthParticle(ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ, SpriteProvider sprite) {
 		super(world, x, y, z, velocityX, velocityY, velocityZ);
+		this.sprite = sprite;
 		this.velocityX = velocityX;
 		this.velocityY = velocityY;
 		this.velocityZ = velocityZ;
-		this.scale = 0.1f;
-		this.maxAge = 20;
+		this.scale = 0.5f;
+		this.maxAge = world.random.nextBetween(4, 8);
+		this.setSpriteForAge(sprite);
+	}
+	
+	@Override
+	public void tick() {
+		super.tick();
+		this.setSpriteForAge(sprite);
 	}
 	
 	@Override
@@ -40,9 +51,8 @@ public class HealthParticle extends SpriteBillboardParticle {
 		
 		@Override
 		public Particle createParticle(SimpleParticleType parameters, ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ) {
-			HealthParticle p = new HealthParticle(world, x, y, z, velocityX, velocityY, velocityZ);
+			HealthParticle p = new HealthParticle(world, x, y, z, velocityX, velocityY, velocityZ, sprite);
 			p.setAlpha(1.0f);
-			p.setSpriteForAge(sprite);
 			return p;
 		}
 	}

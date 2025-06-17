@@ -1,6 +1,7 @@
 {
+	"credit": "Create by RefaMC",
 	"parent": "item/generated",
 	"textures": {
-		"layer0": "item/totem_fragment"
+		"layer0": "ph_hearth:item/totem_fragment"
 	}
 }

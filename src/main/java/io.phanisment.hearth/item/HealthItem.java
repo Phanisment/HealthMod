@@ -37,11 +37,11 @@ public class HealthItem extends Item {
 				if (current < 20.0) {
 					item.decrement(1);
 					attr.setBaseValue(current + 2.0);
-					user.sendMessage(Text.translatable("ph_bhc.add_health"));
+					user.sendMessage(Text.translatable("ph_hearth.add_health"));
 					world.playSound(null, user.getBlockPos(), SoundEvents.ENTITY_PLAYER_LEVELUP, SoundCategory.PLAYERS, 1.0f, 1.2f);
 					((ServerWorld)world).spawnParticles(Main.ADD_HEALTH_PARTICLE, user.getX(), user.getY() + 1, user.getZ(), 10, 0.4, 0.8, 0.4, 0.0);
 				} else {
-					user.sendMessage(Text.translatable("ph_bhc.max_health"));
+					user.sendMessage(Text.translatable("ph_hearth.max_health"));
 				}
 			}
 		}

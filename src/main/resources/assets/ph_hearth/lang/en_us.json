@@ -1,6 +1,7 @@
 {
 	"item.ph_hearth.dark_health": "Dark Health",
 	"item.ph_hearth.health": "Health",
+	"item.ph_hearth.totem_fragment": "Totem Fragment",
 	"itemgroup.ph_hearth": "Health System Group",
 	"ph_hearth.deathprem": "Your Remaining Health is Empty",
 	"ph_hearth.add_health": "Max Health increased!",
