@@ -1,0 +1,8 @@
+{
+	"item.ph_hearth.dark_health": "Dark Health",
+	"item.ph_hearth.health": "Health",
+	"itemgroup.ph_hearth": "Health System Group",
+	"ph_hearth.deathprem": "Your Remaining Health is Empty",
+	"ph_hearth.add_health": "Max Health increased!",
+	"ph_hearth.max_health": "Your Health is Max!"
+}

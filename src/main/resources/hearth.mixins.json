@@ -1,0 +1,14 @@
+{
+	"required": true,
+	"package": "io.phanisment.hearth.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"FallingBlockEntityMixin",
+		"ServerPlayerEntityMixin",
+		"CactusBlockMixin",
+		"ItemEntityMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

@@ -1,34 +1,34 @@
 {
 	"schemaVersion": 1,
-	"id": "bhc",
+	"id": "ph_hearth",
 	"version": "${version}",
-	"name": "test",
-	"description": "Simple Mod",
+	"name": "Health System",
+	"description": "Health System seperti yang ada di Brutal Legends tetapi di mod dan memiliki perubahan yang besar.",
 	"authors": [
-		"Phanisment"
+		"Phanisment",
+		"RefaMC"
 	],
 	"contact": {
-		"homepage": "https://discord.gg/CXuYvt6F6c",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://discord.gg/CXuYvt6F6c"
 	},
 	"license": "CC0-1.0",
 	"icon": "icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"io.phanisment.bhc.Main"
+			"io.phanisment.hearth.Main"
 		],
 		"client": [
-			"io.phanisment.bhc.MainClient"
+			"io.phanisment.hearth.MainClient"
 		]
 	},
 	"mixins": [
-		"bhc.mixins.json"
+		"hearth.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.16.0",
-		"minecraft": "~1.20.1",
-		"java": ">=17",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
 		"fabric-api": "*"
 	},
 	"suggests": {
