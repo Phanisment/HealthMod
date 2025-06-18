@@ -16,6 +16,8 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.particle.ParticleTypes;
 
+import io.phanisment.hearth.common.SoundRegistry;
+
 public class HealthItem extends Item {
 	public HealthItem() {
 		super(new Item.Settings().maxCount(1).fireproof().rarity(Rarity.RARE));
@@ -37,7 +39,7 @@ public class HealthItem extends Item {
 					item.decrement(1);
 					attr.setBaseValue(current + 2.0);
 					user.sendMessage(Text.translatable("ph_hearth.add_health"));
-					world.playSound(null, user.getBlockPos(), SoundEvents.ENTITY_PLAYER_LEVELUP, SoundCategory.PLAYERS, 1.0f, 1.2f);
+					world.playSound(null, user.getBlockPos(), SoundRegistry.USE_HEALTH, SoundCategory.PLAYERS, 1.0f, 1.0f);
 					((ServerWorld)world).spawnParticles(ParticleTypes.TOTEM_OF_UNDYING, user.getX(), user.getY() + 1, user.getZ(), 10, 0.4, 0.8, 0.4, 0.0);
 				} else {
 					user.sendMessage(Text.translatable("ph_hearth.max_health"));

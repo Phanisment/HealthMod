@@ -3,15 +3,16 @@
 	"id": "ph_hearth",
 	"version": "${version}",
 	"name": "Health System",
-	"description": "Health System seperti yang ada di Brutal Legends tetapi di mod dan memiliki perubahan yang besar.",
+	"description": "Dying now comes with a cost! Each death reduces your max health and drops a Dark Health item. You can craft these into Health items to recover your lost hearts.\n\nIt's like Life Steal, but with extra steps and balance.",
 	"authors": [
 		"Phanisment (Agil)",
 		"RefaMC"
 	],
 	"contact": {
-		"homepage": "https://discord.gg/CXuYvt6F6c"
+		"homepage": "https://discord.gg/CXuYvt6F6c",
+		"source": "https://github.com/Phanisment/HealthMod"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "icon.png",
 	"environment": "*",
 	"entrypoints": {

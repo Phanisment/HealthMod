@@ -9,6 +9,7 @@ import net.minecraft.nbt.NbtCompound;
 import net.minecraft.text.Text;
 import net.minecraft.world.GameMode;
 import net.minecraft.item.ItemStack;
+import net.minecraft.sound.SoundCategory;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
@@ -17,6 +18,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import io.phanisment.hearth.item.ItemRegis;
+import io.phanisment.hearth.common.SoundRegistry;
 
 @Mixin(ServerPlayerEntity.class)
 public class ServerPlayerEntityMixin {
@@ -26,12 +28,13 @@ public class ServerPlayerEntityMixin {
 	@Inject(method = "onDeath", at = @At("TAIL"))
 	private void onDeath(DamageSource source, CallbackInfo ci) {
 		ServerPlayerEntity self = (ServerPlayerEntity)(Object)this;
+		self.getWorld().playSound(null, self.getBlockPos(), SoundRegistry.HEALTH_EMPTY, SoundCategory.PLAYERS, 1.0f, 1.0f);
 		EntityAttributeInstance attr = self.getAttributeInstance(EntityAttributes.GENERIC_MAX_HEALTH);
 		double current = attr.getBaseValue();
 		if (current >= 2.0D) {
 			this.newMaxHealth = current - 2.0D;
-		}
-		self.dropItem(new ItemStack(ItemRegis.DARK_HEALTH), false);
+		} 
+		self.dropItem(new ItemStack(ItemRegis.DARK_HEALTH), true);
 	}
 
 	@Inject(method = "copyFrom", at = @At("TAIL"))

@@ -1,0 +1,14 @@
+{
+	"empty_health": {
+		"subtitle": "subtitles.ph_hearth.empty_health",
+		"sounds": [
+			"ph_hearth:empty_health"
+		]
+	},
+	"use_health": {
+		"subtitle": "subtitles.ph_hearth.use_health",
+		"sounds": [
+			"ph_hearth:use_health"
+		]
+	}
+}
